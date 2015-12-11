@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+body {
+	padding-top: 60px;
+	padding-bottom: 100px;
+}
+
+.paging-nav {
+  text-align: right;
+  padding-top: 2px;
+}
+
+.paging-nav a {
+  margin: auto 1px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px 7px;
+  background: #91b9e6;
+  color: white;
+  border-radius: 3px;
+}
+
+.paging-nav .selected-page {
+  background: #187ed5;
+  font-weight: bold;
+}
+
+.flat-table {
+  display: block;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 125%;
+  overflow: auto;
+  width: auto;
+  text-align: center;
+
+  th {
+    background-color: rgb(112, 196, 105);
+    color: white;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+  }
+  td {
+    padding: 18px;
+    line-height: 1.5;
+    vertical-align: middle;
+    border-top: 1px solid #DDD;
+  }
+		}
+
+
+</style>
+<link href="/static/css/bootstrap.css" rel="stylesheet">
+<link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+<script src="/static/js/bootstrap.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="/static/js/paging.js"></script>
+
+<script type="text/javascript">
+            $(document).ready(function() {
+
+              $('#table').paging({
+
+              limit: 10,
+              rowDisplayStyle: 'block',
+              activePage: 0,
+              rows: []
+
+              });
+            });
+        </script>
+
+
+
+  </head>
+  <body>
+
+    <div class="section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+
+        <h1>Orders</h1>
+        <table id="table" class="table table-hover flat-table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>filename</th>
+            <th>phone_no</th>
+            <th>email</th>
+            <th>quality</th>
+            <th>speed</th>
+            <th>support</th>
+            <th>DateTime</th>
+        </thead>
+        <tbody>
+          {%- for todo in todos %}
+            <tr>
+            <td><a href="/uploads/{{ todo.filename }}">{{ todo.id }}</a>
+            <td>{{ todo.name }}</td>
+            <td>{{ todo.filename }}</td>
+            <td>{{ todo.phone_no }}</td>
+            <td>{{ todo.email }}</td>
+            <td>{{ todo.quality }}</td>
+            <td>{{ todo.speed }}</td>
+            <td>{{ todo.support }}</td>
+            <td>{{ todo.pub_date.strftime('%Y-%m-%d %H:%M') }}
+
+          {%- endfor %}
+        </tbody>
+        </table>
+
+
+    </div>
+</div>
+</div>
+</div>
+  </body>
+  </script>
+</html>

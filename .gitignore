@@ -1,0 +1,15 @@
+/flask
+.project
+*.pyc
+*.pyo
+*~
+*.gcode
+*.GCODE
+*.stl
+*.STL
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+

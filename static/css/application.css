@@ -1,0 +1,43 @@
+body{
+  font-family: 'lato',helvetica,Arial;
+  color: #333;
+  background: #fff;
+  background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/bright_squares.png");
+}
+}
+
+.female{
+  text-align: right;
+}
+
+.container{
+  margin-top: 5%;
+}
+
+#console {
+  padding: 0px;
+  text-align: center;
+  color: #4B4B4B;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.64);
+  display: none;
+}
+
+.speed{
+    background: #ccb3dc;
+}
+
+#console2 {
+  padding: 0px;
+  text-align: center;
+  color: #4B4B4B;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.64);
+  display: none;
+}
+
+#console3 {
+  padding: 10px;
+  text-align: center;
+  color: #4B4B4B;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.64);
+  display: none;
+}

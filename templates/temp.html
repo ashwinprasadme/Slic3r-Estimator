@@ -1,0 +1,170 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+    rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span>EZ3-India</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 5px 0px;" class="section"><div class="container"><div class="row"><div class="col-md-12"><div class="page-header"><h1>Order Prints&nbsp;<small>Get Realtime Estimates&nbsp;</small></h1></div></div></div></div></div>
+
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-11 text-left">
+              <form role="form" id="slicer" class="form-horizontal" action="" method=post enctype=multipart/form-data>
+                <div>
+                  <div class="text-center well well-sm">
+                    <h2>Step One</h2>
+                    <p class="text-center">Enter contact details with a valid email address, We'll use it for communication
+                      and &nbsp;an auto-genarated cost estimation will be sent to you</p>
+                  </div>
+
+                  <div class="form-group has-feedback" id="name">
+                    <label class="control-label" for="exampleInputEmail1">Name</label>
+
+                    <input class="form-control" type="text" placeholder="Full Name"
+                    name="name">
+
+                  </div>
+
+                  <div class="form-group has-feedback">
+                    <label class="control-label" for="exampleInputPassword1">Email</label>
+
+                    <input class="form-control" type="email" placeholder="Enter Email"
+                    name="email">
+
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Phone no</label>
+
+                    <input class="form-control" type="text" placeholder="Contact Number" name="phone_no">
+
+                  </div>
+                </div>
+                <div>
+                  <div class="text-center well">
+                    <h2>Step Two</h2>
+                    <p>Export the 3D file as STL or OBJ using your 3D software of choice, if
+                      the software you use cannot export to STL/OBJ, please contact us for support
+                      <br>
+                    </p>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">3D Design File (Convert To STL or OBJ Before Upload)</label>
+                    <br>
+
+                    <input type="file" name="file" id="filebutton">
+
+                    <br>
+
+                  </div>
+                </div>
+                <div>
+                  <div class="text-center well">
+                    <h2>Step Three</h2>
+                    <p>Quality : The layer height, Lesser is better!
+                      <br>Speed : Complex shapes and designs finish better when printed slow
+                      <br>Support : If your model has overhangs, set this to true
+                      <br>
+                      <br>NOTE : Not Sure about the right settings? Please leave the defaults</p>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Quality</label>
+                    <select form="slicer" class="form-control" id="quality" name="quality">
+                      <option value="0.1">
+                       High Quality Print - 100 Micron
+                      </option>
+                      <option value="0.2" selected="selected">
+                       Good Quality - 200 Micron
+                      </option>
+                      <option value="0.3">
+                       Normal Quality - 300 Micron
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label">Speed</label>
+                    <select form="slicer" class="form-control" id="speed" name="speed">
+                      <option value="40" selected="selected">
+                         Slowest - 40 mm/s
+                        </option>
+                        <option value="50" selected="selected">
+                           Slower - 50 mm/s
+                          </option>
+                       <option value="60">
+                        Normal - 60 mm/s
+                       </option>
+                       <option value="70">
+                        Fast - 70 mm/s
+                       </option>
+                       <option value="80">
+                        Fastest - 80 mm/s
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label">Support</label>
+                    <select form="slicer" class="form-control" id="support" name="support">
+                      <option value="No">
+                       No
+                      </option>
+
+                      <option value="Yes" selected="selected">
+                       Yes
+                      </option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary  btn-block btn-default" >Send Query!</button>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <hr>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
